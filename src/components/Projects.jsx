@@ -3,6 +3,17 @@ import './Projects.css'
 import { FaExternalLinkAlt, FaGithub, FaTimes } from 'react-icons/fa'
 import busCardImg from '../assets/bus card.jpg'
 import busVideo from '../assets/bus.mp4'
+import cricketImg from '../assets/cricket.png'
+import cricketVideo from '../assets/CriVedio.mp4'
+import travelImg from '../assets/tarvel app.png'
+import travelVideo from '../assets/travel.mp4'
+import ecommerceImg from '../assets/e commerce.png'
+import coffeeShopImg from '../assets/coffee shop.png'
+import coffeeImg from '../assets/coffe (1).png'
+import clothingImg from '../assets/clothing website.png'
+import fashionVideo from '../assets/fashion.mp4'
+import securityImg from '../assets/security.png'
+import securityVideo from '../assets/security.mp4'
 
 const Projects = () => {
     const [activeTab, setActiveTab] = useState('ui/ux')
@@ -14,8 +25,8 @@ const Projects = () => {
             title: 'Bus Card Payment App',
             category: 'UI/UX Design',
             image: busCardImg,
-            description: 'A modern dashboard layout for an online store with analytics and product management.',
-            details: 'The Bus Card Payment App is a user-friendly mobile application designed to streamline public transportation payments.',
+            description: 'A comprehensive mobile solution for seamless public transportation payments with real-time balance tracking and transaction history.',
+            details: 'The Bus Card Payment App is a user-friendly mobile application designed to streamline public transportation payments. It provides an intuitive interface for managing bus fares, viewing card balances, and tracking transaction history. The design prioritizes quick access to payment features with a focus on accessibility and user experience. Created with a mobile-first approach to ensure smooth navigation and secure digital transactions for daily commuters.',
             productOverview: [
                 'Pay bus fares by scanning a QR code',
                 'View card balance instantly',
@@ -41,18 +52,186 @@ const Projects = () => {
             isVideo: true
         },
         {
-            title: 'Mobile Banking App',
+            title: 'Cricket Website',
             category: 'UI/UX Design',
-            image: 'https://via.placeholder.com/600x400/1e293b/c084fc?text=UI/UX+Project+2',
-            description: 'User-centered design for a fintech application focusing on accessibility and ease of use.',
-            details: 'The Mobile Banking App brings secure and intuitive financial management to your fingertips. Key features include: account management, fund transfers, bill payments, investment tracking, and 24/7 customer support. Built with security and user experience at its core.',
-            technologies: ['Figma', 'Prototyping', 'User Research'],
-            liveLink: '#',
-            githubLink: '#'
+            image: cricketImg,
+            description: 'A modern landing page designed for a cricket platform that provides match updates, live scores, team details, player statistics, and rankings.',
+            details: 'A modern landing page designed for a cricket platform that provides match updates, live scores, team details, player statistics, and rankings. The design focuses on clear information hierarchy, easy navigation, and engaging visuals to help users quickly access upcoming, live, and completed match information. Created using a user-centered design approach to deliver a clean and intuitive browsing experience.',
+            productOverview: [
+                'Live score updates and match tracking',
+                'Comprehensive team and player statistics',
+                'Real-time player rankings and performance metrics',
+                'Intuitive navigation for match information access',
+                'Engaging visual design for better user experience',
+                'Clean information hierarchy for quick browsing'
+            ],
+            technologies: ['Figma', 'UI/UX Design', 'Web Design'],
+            liveLink: cricketVideo,
+            figmaLink: 'https://www.figma.com/design/1n9sXo7l2mLh5j8vHqkKZP/Cricket-Website?t=8afARXhr2HU5DwO2-1',
+            isVideo: true,
+            isClient: true
+        },
+        {
+            title: 'Travel Mobile App',
+            category: 'UI/UX Design',
+            image: travelImg,
+            description: 'A visually engaging travel app that simplifies destination discovery, detailed exploration, and hassle-free bookings with an intuitive user interface.',
+            details: 'This travel mobile application is designed to help users discover popular travel destinations, explore place details, and make bookings easily through a visually engaging and user-friendly interface. The app focuses on providing a smooth browsing experience with clear navigation and attractive destination previews.',
+            productOverview: [
+                'Browse popular travel destinations',
+                'Search for places easily',
+                'View detailed information about each location',
+                'Book trips with a simple and clear call-to-action',
+                'Clean and minimal UI design',
+                'Smooth user browsing experience'
+            ],
+            problemStatement: [
+                'Many travel apps feel cluttered and overwhelming',
+                'Difficult to quickly find destinations',
+                'Unclear presentation of key details',
+                'Missing location, duration, pricing, and ratings information',
+                'Poor user experience affecting booking decisions'
+            ],
+            proposedSolution: [
+                'Clean and minimal UI that reduces visual clutter',
+                'Browse popular travel destinations easily',
+                'Quick and efficient search functionality',
+                'Detailed information display for each location',
+                'Simple and clear call-to-action for bookings',
+                'Improved user experience with intuitive navigation'
+            ],
+            technologies: ['Figma', 'Mobile Design', 'UI/UX Design'],
+            liveLink: travelVideo,
+            figmaLink: 'https://www.figma.com/design/zLhZwCHksA12fKPL7Y2tzl/TRAVEL?t=8afARXhr2HU5DwO2-1',
+            isVideo: true
+        },
+        {
+            title: 'E-Commerce Coffee Shop',
+            category: 'UI/UX Design',
+            image: ecommerceImg,
+            description: 'A strategically designed conversion-oriented coffee shop website with clear user journey from brand introduction to purchase, featuring social proof and visual engagement.',
+            details: 'Conceptualized and structured the core content sections for a modern, conversion-oriented coffee shop website. The layout is designed to guide users from brand introduction through to social proof, following a strategic user journey. Features include a strong value proposition with Hero Statement, Social Proof & Process section highlighting authenticity through live coffee making, Navigation & Discovery pathways for menu exploration and product sales, Trust & Validation through customer testimonials, and dedicated Visual Engagement gallery space to showcase products and brand aesthetic.',
+            productOverview: [
+                'Strong Hero Statement with value proposition and promotional offer',
+                'Social Proof & Process section with Live Coffee Making',
+                'Clear Navigation & Discovery pathways for Menus and Products',
+                'Customer Testimonials for Trust & Validation',
+                'Dedicated Visual Gallery for products and ambiance',
+                'Strategic user journey designed for conversions'
+            ],
+            problemStatement: [
+                'Coffee shop websites often lack clear product presentation',
+                'Difficult user journey from discovery to purchase',
+                'Missing social proof and authenticity elements',
+                'Poor visual representation of brand and products',
+                'Unclear call-to-action pathways for sales'
+            ],
+            proposedSolution: [
+                'Strategic content structure guiding users through brand to sales',
+                'Hero statement with compelling value proposition',
+                'Live coffee making section for authenticity and engagement',
+                'Clear menu and product discovery sections',
+                'Customer testimonials to build credibility',
+                'Visual gallery showcasing products and brand aesthetic'
+            ],
+            technologies: ['Figma', 'Web Design', 'UI/UX Design'],
+            liveLink: coffeeShopImg,
+            figmaLink: 'https://www.figma.com/design/g7Wnl2qxrNfOEq3sO2xiSN/coffee-shop?node-id=0-1&t=ybefPWdQR8n9yXfe-1'
+        },
+        {
+            title: 'Clothing Website',
+            category: 'UI/UX Design',
+            image: clothingImg,
+            description: 'A modern, trendy fashion e-commerce platform with curated collections, easy browsing, and seamless shopping experience. (Design in Progress)',
+            details: 'A contemporary fashion website designed to showcase clothing collections with a focus on visual appeal and user engagement. The platform features trend-focused product discovery, easy navigation through categories, and a smooth checkout experience. Built with a clean and modern aesthetic to highlight products while maintaining an intuitive shopping journey. ⚠️ Note: This design is currently incomplete and under development.',
+            productOverview: [
+                'Browse curated fashion collections',
+                'Trend-focused product discovery',
+                'Easy category navigation',
+                'Quick product detail viewing',
+                'Simple add-to-cart functionality',
+                'Streamlined checkout process'
+            ],
+            problemStatement: [
+                'Fashion websites often have overwhelming product layouts',
+                'Difficult to find specific styles and trends',
+                'Complex navigation and checkout process',
+                'Poor product presentation and filtering',
+                'Users abandon carts due to complicated UX'
+            ],
+            proposedSolution: [
+                'Clean and organized product layout',
+                'Curated collections for easy browsing',
+                'Intuitive category and filter options',
+                'Attractive product showcase design',
+                'Simple and fast checkout process',
+                'Trend-focused homepage for engagement'
+            ],
+            technologies: ['Figma', 'E-commerce Design', 'UI/UX Design'],
+            liveLink: fashionVideo,
+            figmaLink: 'https://www.figma.com/design/S2rGcmxMtecAy3jBqBfA6J/fashion-website?t=jHUM2mrJb2EiPsiE-1',
+            isVideo: true
+        },
+        {
+            title: 'Security Home System',
+            category: 'UI/UX Design',
+            image: securityImg,
+            description: 'A comprehensive smart home security system interface designed for intuitive monitoring, control, and real-time alerts with modern aesthetics.',
+            details: 'A professional security home system UI designed to provide homeowners with complete control and monitoring of their security devices. The interface features real-time status monitoring, device management, alert notifications, and emergency controls. Built with a clean, modern design that prioritizes user safety and quick access to critical security functions. The system integrates multiple security cameras, sensors, and smart locks into one unified dashboard for comprehensive home protection.',
+            productOverview: [
+                'Real-time security device monitoring',
+                'Multi-camera live feed display',
+                'Smart sensor integration and status tracking',
+                'Emergency alert notifications',
+                'Device control and automation',
+                'Security history and activity logs',
+                'User-friendly dashboard interface'
+            ],
+            problemStatement: [
+                'Security systems are often complex and difficult to navigate',
+                'Multiple devices scattered across different apps',
+                'Delayed notifications and alerts',
+                'Poor visualization of home security status',
+                'Slow emergency response mechanisms'
+            ],
+            proposedSolution: [
+                'Unified dashboard for all security devices',
+                'Real-time monitoring and instant notifications',
+                'Quick access emergency controls',
+                'Visual status indicators for all sensors and cameras',
+                'Integrated automation and scheduling',
+                'Activity history and analytics'
+            ],
+            technologies: ['Figma', 'IoT Design', 'UI/UX Design', 'Dashboard Design'],
+            liveLink: securityVideo,
+            figmaLink: 'https://www.figma.com/design/f02eJKN04b458GyBRswYYJ/security-system?node-id=301-807&t=A1FXAi6iNc5Ri9dk-1',
+            isVideo: true,
+            isClient: true
         }
     ]
 
     const frontendProjects = [
+        {
+            title: 'Security Home System',
+            category: 'Frontend Development',
+            image: securityImg,
+            description: 'A comprehensive smart home security system interface with real-time monitoring and control.',
+            details: 'A professional security home system frontend built with React featuring real-time status monitoring, device management, alert notifications, and emergency controls. The application integrates multiple security cameras, sensors, and smart locks into one unified dashboard for comprehensive home protection.',
+            productOverview: [
+                'Real-time security device monitoring',
+                'Multi-camera live feed display',
+                'Smart sensor integration and status tracking',
+                'Emergency alert notifications',
+                'Device control and automation',
+                'Security history and activity logs',
+                'User-friendly dashboard interface'
+            ],
+            technologies: ['HTML', 'CSS', 'JS'],
+            liveLink: securityVideo,
+            githubLink: '#',
+            isVideo: true,
+            isClient: true
+        },
         {
             title: 'Travel Agency App',
             category: 'Frontend Development',
@@ -77,6 +256,7 @@ const Projects = () => {
 
     const ProjectCard = ({ project, onClick }) => (
         <div className="project-card" onClick={onClick} style={{ cursor: 'pointer' }}>
+            {project.isClient && <div className="client-badge">👤 Client Project</div>}
             <div className="project-img">
                 <img src={project.image} alt={project.title} />
                 <div className="overlay">
@@ -110,7 +290,10 @@ const Projects = () => {
                 <button className="modal-close" onClick={onClose}><FaTimes /></button>
                 <img src={project.image} alt={project.title} className="modal-image" />
                 <div className="modal-body">
-                    <h2>{project.title}</h2>
+                    <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '10px' }}>
+                        <h2 style={{ margin: 0 }}>{project.title}</h2>
+                        {project.isClient && <span style={{ backgroundColor: '#4f46e5', color: 'white', padding: '5px 12px', borderRadius: '20px', fontSize: '12px', fontWeight: 'bold' }}>👤 Client Project</span>}
+                    </div>
                     <span className="modal-category">{project.category}</span>
                     <p className="modal-details">{project.details}</p>
 
