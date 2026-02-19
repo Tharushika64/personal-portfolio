@@ -17,15 +17,15 @@ const About = () => {
                         </p>
                         <div className="stats">
                             <div className="stat-item">
-                                <h3>3+</h3>
+                                <h3>0+</h3>
                                 <p>Years Experience</p>
                             </div>
                             <div className="stat-item">
-                                <h3>50+</h3>
+                                <h3>7+</h3>
                                 <p>Projects Completed</p>
                             </div>
                             <div className="stat-item">
-                                <h3>20+</h3>
+                                <h3>2+</h3>
                                 <p>Happy Clients</p>
                             </div>
                         </div>
