@@ -49,7 +49,8 @@ const Projects = () => {
             technologies: ['Figma', 'UI/UX Design', 'Mobile Design'],
             liveLink: busVideo,
             figmaLink: 'https://www.figma.com/design/n4GVrT20zlYm7i5swWnQBu/bus-payement?t=8afARXhr2HU5DwO2-1',
-            isVideo: true
+            isVideo: true,
+            completed: true
         },
         {
             title: 'Cricket Website',
@@ -69,7 +70,8 @@ const Projects = () => {
             liveLink: cricketVideo,
             figmaLink: 'https://www.figma.com/design/1n9sXo7l2mLh5j8vHqkKZP/Cricket-Website?t=8afARXhr2HU5DwO2-1',
             isVideo: true,
-            isClient: true
+            isClient: true,
+            completed: true
         },
         {
             title: 'Travel Mobile App',
@@ -103,7 +105,8 @@ const Projects = () => {
             technologies: ['Figma', 'Mobile Design', 'UI/UX Design'],
             liveLink: travelVideo,
             figmaLink: 'https://www.figma.com/design/zLhZwCHksA12fKPL7Y2tzl/TRAVEL?t=8afARXhr2HU5DwO2-1',
-            isVideo: true
+            isVideo: true,
+            completed: true
         },
         {
             title: 'E-Commerce Coffee Shop',
@@ -136,7 +139,8 @@ const Projects = () => {
             ],
             technologies: ['Figma', 'Web Design', 'UI/UX Design'],
             liveLink: coffeeShopImg,
-            figmaLink: 'https://www.figma.com/design/g7Wnl2qxrNfOEq3sO2xiSN/coffee-shop?node-id=0-1&t=ybefPWdQR8n9yXfe-1'
+            figmaLink: 'https://www.figma.com/design/g7Wnl2qxrNfOEq3sO2xiSN/coffee-shop?node-id=0-1&t=ybefPWdQR8n9yXfe-1',
+            completed: true
         },
         {
             title: 'Clothing Website',
@@ -170,7 +174,8 @@ const Projects = () => {
             technologies: ['Figma', 'E-commerce Design', 'UI/UX Design'],
             liveLink: fashionVideo,
             figmaLink: 'https://www.figma.com/design/S2rGcmxMtecAy3jBqBfA6J/fashion-website?t=jHUM2mrJb2EiPsiE-1',
-            isVideo: true
+            isVideo: true,
+            completed: false
         },
         {
             title: 'Security Home System',
@@ -206,7 +211,8 @@ const Projects = () => {
             liveLink: securityVideo,
             figmaLink: 'https://www.figma.com/design/f02eJKN04b458GyBRswYYJ/security-system?node-id=301-807&t=A1FXAi6iNc5Ri9dk-1',
             isVideo: true,
-            isClient: true
+            isClient: true,
+            completed: true
         }
     ]
 
@@ -230,7 +236,8 @@ const Projects = () => {
             liveLink: securityVideo,
             githubLink: '#',
             isVideo: true,
-            isClient: true
+            isClient: true,
+            completed:false
         },
         {
             title: 'Travel Agency App',
@@ -240,7 +247,8 @@ const Projects = () => {
             details: 'A comprehensive travel booking platform with an intuitive interface for searching flights, hotels, and vacation packages. Features include advanced filtering, real-time availability, secure payment processing, and personalized travel recommendations.',
             technologies: ['React', 'Framer Motion', 'Tailwind CSS', 'Node.js'],
             liveLink: '#',
-            githubLink: '#'
+            githubLink: '#',
+            completed: false
         },
         {
             title: 'Finance Tracker',
@@ -250,13 +258,17 @@ const Projects = () => {
             details: 'Track your spending, manage budgets, and achieve financial goals with this comprehensive finance tracker. Includes expense categorization, visual analytics, goal setting, recurring expense tracking, and detailed financial reports.',
             technologies: ['React', 'Chart.js', 'Context API', 'Local Storage'],
             liveLink: '#',
-            githubLink: '#'
+            githubLink: '#',
+            completed: false
         }
     ]
 
     const ProjectCard = ({ project, onClick }) => (
-        <div className="project-card" onClick={onClick} style={{ cursor: 'pointer' }}>
+        <div className={`project-card ${project.completed ? 'completed' : 'in-progress'}`} onClick={onClick} style={{ cursor: 'pointer' }}>
             {project.isClient && <div className="client-badge">👤 Client Project</div>}
+            <div className={`status-badge ${project.completed ? 'completed-badge' : 'in-progress-badge'}`}>
+                {project.completed ? '✓ Completed' : '◐ In Progress'}
+            </div>
             <div className="project-img">
                 <img src={project.image} alt={project.title} />
                 <div className="overlay">
@@ -290,9 +302,14 @@ const Projects = () => {
                 <button className="modal-close" onClick={onClose}><FaTimes /></button>
                 <img src={project.image} alt={project.title} className="modal-image" />
                 <div className="modal-body">
-                    <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '10px' }}>
+                    <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '10px', gap: '10px', flexWrap: 'wrap' }}>
                         <h2 style={{ margin: 0 }}>{project.title}</h2>
-                        {project.isClient && <span style={{ backgroundColor: '#4f46e5', color: 'white', padding: '5px 12px', borderRadius: '20px', fontSize: '12px', fontWeight: 'bold' }}>👤 Client Project</span>}
+                        <div style={{ display: 'flex', gap: '10px', alignItems: 'center', flexWrap: 'wrap' }}>
+                            {project.isClient && <span style={{ backgroundColor: '#4f46e5', color: 'white', padding: '5px 12px', borderRadius: '20px', fontSize: '12px', fontWeight: 'bold' }}>👤 Client Project</span>}
+                            <span style={{ backgroundColor: project.completed ? '#10b981' : '#f59e0b', color: 'white', padding: '5px 12px', borderRadius: '20px', fontSize: '12px', fontWeight: 'bold' }}>
+                                {project.completed ? '✓ Completed' : '◐ In Progress'}
+                            </span>
+                        </div>
                     </div>
                     <span className="modal-category">{project.category}</span>
                     <p className="modal-details">{project.details}</p>

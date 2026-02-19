@@ -397,3 +397,40 @@
     display: block;
     border-radius: 16px;
 }
+
+/* Completion Status Badges */
+.status-badge {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    z-index: 10;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.completed-badge {
+    background: linear-gradient(135deg, #10b981, #059669);
+    color: white;
+}
+
+.in-progress-badge {
+    background: linear-gradient(135deg, #f59e0b, #d97706);
+    color: white;
+}
+
+/* Project Card Status Styling */
+.project-card.completed {
+    border-color: rgba(16, 185, 129, 0.2);
+}
+
+.project-card.in-progress {
+    border-color: rgba(245, 158, 11, 0.2);
+    opacity: 0.95;
+}
