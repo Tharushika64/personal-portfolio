@@ -2,7 +2,22 @@
 
 **Live Demo:** [https://tharushika64.github.io/personal-portfolio/](https://tharushika64.github.io/personal-portfolio/)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 🚀 How to Deploy Updated Changes
+I have set up **GitHub Actions** to automatically deploy your website. To make your changes visible:
+
+1. **Commit and Push**: From your local terminal, run:
+   ```bash
+   git add .
+   git commit -m "Update portfolio"
+   git push origin dev
+   ```
+2. **Enable GitHub Pages**:
+   - Go to your GitHub repository: [Tharushika64/personal-portfolio](https://github.com/Tharushika64/personal-portfolio)
+   - Go to **Settings** > **Pages**.
+   - Under **Build and deployment** > **Source**, select **GitHub Actions**.
+
+The website will then update automatically every time you push to the `dev` branch!
+
 
 Currently, two official plugins are available:
 
