@@ -1,4 +1,6 @@
-# React + Vite
+# React + Vite - Personal Portfolio
+
+**Live Demo:** [https://tharushika64.github.io/personal-portfolio/](https://tharushika64.github.io/personal-portfolio/)
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 

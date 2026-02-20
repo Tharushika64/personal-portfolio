@@ -1,7 +1,23 @@
+import { useState, useRef, useEffect } from 'react'
 import './Hero.css'
 import HeroImg from '../assets/IMG_3888.jpeg'
+import cvPdf from '../assets/naduni-cv.pdf'
+import seInternCv from '../assets/Naduni_SE_Intern_CV.pdf'
 
 const Hero = () => {
+    const [showDropdown, setShowDropdown] = useState(false)
+    const dropdownRef = useRef(null)
+
+    useEffect(() => {
+        const handleClickOutside = (event) => {
+            if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+                setShowDropdown(false)
+            }
+        }
+        document.addEventListener('mousedown', handleClickOutside)
+        return () => document.removeEventListener('mousedown', handleClickOutside)
+    }, [])
+
     return (
         <section className="hero" id="home">
             <div className="container hero-container">
@@ -17,7 +33,24 @@ const Hero = () => {
                     <div className="hero-btns">
                         <a href="#projects" className="btn">View Work</a>
                         <a href="#contact" className="btn btn-outline">Contact Me</a>
-                        <a href="/naduni-cv.pdf" download="naduni-cv.pdf" className="btn btn-outline">Download CV</a>
+                        <div className="dropdown-wrapper" ref={dropdownRef}>
+                            <button
+                                className="btn btn-outline"
+                                onClick={() => setShowDropdown(!showDropdown)}
+                            >
+                                Download CV
+                            </button>
+                            {showDropdown && (
+                                <div className="dropdown-menu">
+                                    <a href={cvPdf} download="Naduni_Jayasingha_CV.pdf" className="dropdown-item" onClick={() => setShowDropdown(false)}>
+                                        General CV
+                                    </a>
+                                    <a href={seInternCv} download="Naduni_SE_Intern_CV.pdf" className="dropdown-item" onClick={() => setShowDropdown(false)}>
+                                        SE Intern CV
+                                    </a>
+                                </div>
+                            )}
+                        </div>
                     </div>
                 </div>
                 <div className="hero-img-wrapper">

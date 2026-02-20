@@ -88,8 +88,29 @@
 }
 
 .timeline-content p {
-    font-size: 0.95rem;
     color: #94a3b8;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.edu-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 15px;
+    color: #38bdf8;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.edu-link:hover {
+    color: #7dd3fc;
+}
+
+.edu-link svg {
+    font-size: 12px;
 }
 
 @media screen and (max-width: 768px) {

@@ -1,35 +1,58 @@
 import './Education.css'
-import { FaGraduationCap, FaCertificate } from 'react-icons/fa'
+import { FaGraduationCap, FaCertificate, FaExternalLinkAlt } from 'react-icons/fa'
+
+import pythonPdf from '../assets/python.pdf'
+import dataSciencePdf from '../assets/Data Science & Analytics.pdf'
+import uiPdf from '../assets/ui.pdf'
+import udemyPdf from '../assets/udemy.pdf'
 
 const Education = () => {
     const education = [
         {
             type: 'degree',
-            title: 'BSc in Computer Science (Hons)',
-            institution: 'University of Westminster',
-            year: '2020 - 2024',
-            description: 'Specialized in Software Engineering with First Class Honours.'
+            title: 'BSc (Hons) in Software Engineering ',
+            institution: 'BCI Campus',
+            year: '2023 - 2027',
+            description: 'Undergraduate Student.'
         },
         {
             type: 'certification',
-            title: 'Google UX Design Professional Certificate',
-            institution: 'Coursera',
-            year: '2023',
-            description: 'Completed rigorous training in user-centric design research, prototyping, and testing.'
+            title: 'Figma + AI + Real Project',
+            institution: 'Udemy',
+            year: '2025',
+            description: 'Mastered advanced Figma techniques, integrated AI tools for design efficiency, and completed a real-world project to apply learned skills.',
+            link: udemyPdf
         },
         {
             type: 'certification',
-            title: 'Graphic Design NVQ Level 4',
+            title: 'Intro to UI/UX Design',
+            institution: 'Le Wagon',
+            year: '2025',
+            description: 'Gained a solid foundation in UI/UX design principles, including user research, wireframing, and prototyping using Figma.',
+            link: uiPdf
+        },
+        {
+            type: 'certification',
+            title: 'Data Science & Analytics',
+            institution: 'HP LIFE',
+            year: '2026',
+            description: 'Learned the fundamentals of data analysis, including data collection, interpretation, and visualization techniques to drive business insights.',
+            link: dataSciencePdf
+        },
+        {
+            type: 'degree',
+            title: 'NVQ Level 4 in Graphic Design',
             institution: 'NAITA',
-            year: '2021',
+            year: '2022',
             description: 'Professional qualification in graphic design principles, software, and visual communication.'
         },
         {
             type: 'certification',
-            title: 'Meta Frontend Developer Certificate',
-            institution: 'Coursera',
-            year: '2022',
-            description: 'Mastered React, advanced JavaScript, and modern frontend frameworks.'
+            title: 'Python for Data Science',
+            institution: 'Cognitiveclass.ai',
+            year: '2025',
+            description: 'Mastered fundamental Python programming, including data structures, logic, and data manipulation using libraries like Pandas and NumPy for data analysis.',
+            link: pythonPdf
         }
     ]
 
@@ -49,6 +72,11 @@ const Education = () => {
                                 <h3>{item.title}</h3>
                                 <h4>{item.institution}</h4>
                                 <p>{item.description}</p>
+                                {item.link && (
+                                    <a href={item.link} target="_blank" rel="noopener noreferrer" className="edu-link">
+                                        <FaExternalLinkAlt /> View Achievement
+                                    </a>
+                                )}
                             </div>
                         </div>
                     ))}

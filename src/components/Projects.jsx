@@ -14,6 +14,12 @@ import clothingImg from '../assets/clothing website.png'
 import fashionVideo from '../assets/fashion.mp4'
 import securityImg from '../assets/security.png'
 import securityVideo from '../assets/security.mp4'
+import auraluxeImg from '../assets/AuraLuxe.png'
+import auraluxeVideo from '../assets/auraluxa - Trim.mp4'
+import salonEaseImg from '../assets/saloneasa.png'
+import salonEaseVideo from '../assets/saloneasa.mp4'
+import eventImg from '../assets/EVENT.png'
+import eventVideo from '../assets/eventmanagement.mp4'
 
 const Projects = () => {
     const [activeTab, setActiveTab] = useState('ui/ux')
@@ -218,8 +224,45 @@ const Projects = () => {
 
     const frontendProjects = [
         {
+            title: 'Event Planning Management System',
+            category: 'Fullstack',
+            image: eventImg,
+            description: 'A streamlined platform for planning and managing events, featuring scheduling, guest list management, and real-time updates.',
+            details: 'The Event Planning Management System is a comprehensive tool designed to simplify the complexities of event coordination. Built with a focus on ease of use, it allows planners to manage every detail from guest lists and vendor coordination to real-time event updates and scheduling. The application provides a central hub for all stakeholders to collaborate and ensure the success of any event, whether large or small. (Note: Frontend is completed; Backend and Database are currently in development).',
+            productOverview: [
+                'Effortless event scheduling and planning',
+                'Vendor and resource management',
+                'Real-time updates and notification system',
+                'Collaborative tools for event coordinators'
+            ],
+            technologies: ['React', 'HTML', 'CSS', 'JS', 'python', 'MongoDB'],
+            liveLink: eventVideo,
+            githubLink: 'https://github.com/Tharushika64/EventManagement',
+            isVideo: true,
+            completed: false
+        },
+        {
+            title: 'SalonEase',
+            category: 'Fullstack',
+            image: salonEaseImg,
+            description: 'A comprehensive salon appointment booking system offering seamless scheduling, service management, and user profiles.',
+            details: 'SalonEase is a robust full-stack application designed to modernize the salon booking experience. It features an intuitive interface for clients to browse services, book appointments, and manage their profiles. For salon administrators, it offers comprehensive tools to manage appointments, services, and staff. The system is built to enhance operational efficiency and improve customer satisfaction.',
+            productOverview: [
+                'User-friendly appointment booking interface',
+                'Comprehensive service catalog',
+                'Secure user authentication and profiles',
+                'Admin dashboard for calendar and service management',
+                'Responsive design for mobile and desktop'
+            ],
+            technologies: ['HTML', 'CSS', 'JS', 'Php', 'MySQL'],
+            liveLink: salonEaseVideo,
+            githubLink: 'https://github.com/Tharushika64/SalonEase',
+            isVideo: true,
+            completed: true
+        },
+        {
             title: 'Security Home System',
-            category: 'Frontend Development',
+            category: 'frontend',
             image: securityImg,
             description: 'A comprehensive smart home security system interface with real-time monitoring and control.',
             details: 'A professional security home system frontend built with React featuring real-time status monitoring, device management, alert notifications, and emergency controls. The application integrates multiple security cameras, sensors, and smart locks into one unified dashboard for comprehensive home protection.',
@@ -237,30 +280,29 @@ const Projects = () => {
             githubLink: '#',
             isVideo: true,
             isClient: true,
-            completed:false
-        },
-        {
-            title: 'Travel Agency App',
-            category: 'Frontend Development',
-            image: 'https://via.placeholder.com/600x400/1e293b/38bdf8?text=Frontend+Project+1',
-            description: 'Responsive travel booking website built with React and Framer Motion.',
-            details: 'A comprehensive travel booking platform with an intuitive interface for searching flights, hotels, and vacation packages. Features include advanced filtering, real-time availability, secure payment processing, and personalized travel recommendations.',
-            technologies: ['React', 'Framer Motion', 'Tailwind CSS', 'Node.js'],
-            liveLink: '#',
-            githubLink: '#',
             completed: false
         },
         {
-            title: 'Finance Tracker',
-            category: 'Frontend Development',
-            image: 'https://via.placeholder.com/600x400/1e293b/4ade80?text=Frontend+Project+2',
-            description: 'Personal finance management tool with data visualization and budget planning.',
-            details: 'Track your spending, manage budgets, and achieve financial goals with this comprehensive finance tracker. Includes expense categorization, visual analytics, goal setting, recurring expense tracking, and detailed financial reports.',
-            technologies: ['React', 'Chart.js', 'Context API', 'Local Storage'],
-            liveLink: '#',
-            githubLink: '#',
-            completed: false
-        }
+            title: 'AuraLuxe',
+            category: 'frontend',
+            image: auraluxeImg,
+            description: 'A premium clothing website featuring a modern design, built with Angular to provide a seamless fashion shopping experience.',
+            details: 'AuraLuxe is a state-of-the-art fashion e-commerce platform that combines aesthetic excellence with robust functionality. Developed using Angular and TypeScript, it offers users a smooth and responsive interface for exploring the latest clothing trends. The project focuses on high-quality visuals, intuitive navigation, and a premium user experience tailored for modern fashion enthusiasts.',
+            productOverview: [
+                'Modern fashion e-commerce interface',
+                'Seamless shopping experience',
+                'Responsive design for all devices',
+                'Curated clothing collections',
+                'High-quality visual presentation',
+                'Intuitive navigation and search'
+            ],
+            technologies: ['Angular', 'TypeScript', 'HTML', 'CSS'],
+            liveLink: auraluxeVideo,
+            githubLink: 'https://github.com/Tharushika64/ANGULAR-PROJECT',
+            isVideo: true,
+            completed: true
+        },
+
     ]
 
     const ProjectCard = ({ project, onClick }) => (
@@ -346,7 +388,7 @@ const Projects = () => {
                             </ul>
                         </div>
                     )}
-                    
+
                     <div className="modal-tech">
                         <h4>🛠️ Technologies Used:</h4>
                         <div className="tech-tags">
@@ -388,7 +430,7 @@ const Projects = () => {
                         className={`tab-btn ${activeTab === 'frontend' ? 'active' : ''}`}
                         onClick={() => setActiveTab('frontend')}
                     >
-                        Frontend Projects
+                        Fullstack Projects
                     </button>
                 </div>
 
