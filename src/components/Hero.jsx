@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect } from 'react'
 import './Hero.css'
-import HeroImg from '../assets/IMG_3888.jpeg'
+import HeroImg from '../assets/profile_naduni.png'
 import cvPdf from '../assets/naduni-cv.pdf'
 import seInternCv from '../assets/Naduni_SE_Intern_CV.pdf'
 
@@ -55,7 +55,6 @@ const Hero = () => {
                 </div>
                 <div className="hero-img-wrapper">
                     <div className="hero-img-placeholder">
-                        <div className="circle"></div>
                         <img src={HeroImg} alt="Naduni Jayasingha" className="hero-img" />
                     </div>
                 </div>
