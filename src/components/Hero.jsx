@@ -1,7 +1,7 @@
 import { useState, useRef, useEffect } from 'react'
 import './Hero.css'
 import HeroImg from '../assets/profile_naduni.png'
-import cvPdf from '../assets/naduni-cv.pdf'
+import uiuxCv from '../assets/my_uiux_cv.pdf'
 import seInternCv from '../assets/Naduni_SE_Intern_CV.pdf'
 
 const Hero = () => {
@@ -42,8 +42,8 @@ const Hero = () => {
                             </button>
                             {showDropdown && (
                                 <div className="dropdown-menu">
-                                    <a href={cvPdf} download="Naduni_Jayasingha_CV.pdf" className="dropdown-item" onClick={() => setShowDropdown(false)}>
-                                        General CV
+                                    <a href={uiuxCv} download="Naduni_UIUX_CV.pdf" className="dropdown-item" onClick={() => setShowDropdown(false)}>
+                                        UI/UX CV
                                     </a>
                                     <a href={seInternCv} download="Naduni_SE_Intern_CV.pdf" className="dropdown-item" onClick={() => setShowDropdown(false)}>
                                         SE Intern CV
