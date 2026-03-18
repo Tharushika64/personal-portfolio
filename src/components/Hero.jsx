@@ -1,8 +1,8 @@
 import { useState, useRef, useEffect } from 'react'
 import './Hero.css'
 import HeroImg from '../assets/profile_naduni.png'
-import uiuxCv from '../assets/my_uiux_cv.pdf'
-import seInternCv from '../assets/Naduni_SE_Intern_CV.pdf'
+import uiuxCv from '../assets/uiux designer - naduni.pdf'
+import seInternCv from '../assets/SE- CV- Naduni.pdf'
 
 const Hero = () => {
     const [showDropdown, setShowDropdown] = useState(false)
@@ -42,10 +42,10 @@ const Hero = () => {
                             </button>
                             {showDropdown && (
                                 <div className="dropdown-menu">
-                                    <a href={uiuxCv} download="Naduni_UIUX_CV.pdf" className="dropdown-item" onClick={() => setShowDropdown(false)}>
+                                    <a href={uiuxCv} download="uiux designer - naduni.pdf" className="dropdown-item" onClick={() => setShowDropdown(false)}>
                                         UI/UX CV
                                     </a>
-                                    <a href={seInternCv} download="Naduni_SE_Intern_CV.pdf" className="dropdown-item" onClick={() => setShowDropdown(false)}>
+                                    <a href={seInternCv} download="SE- CV- Naduni.pdf" className="dropdown-item" onClick={() => setShowDropdown(false)}>
                                         SE Intern CV
                                     </a>
                                 </div>
