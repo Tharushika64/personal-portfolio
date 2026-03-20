@@ -1,8 +1,8 @@
 import { useState, useRef, useEffect } from 'react'
 import './Hero.css'
 import HeroImg from '../assets/profile_naduni.png'
-import uiuxCv from '../assets/my_uiux_cv.pdf'
-import seInternCv from '../assets/Naduni_SE_Intern_CV.pdf'
+import uiuxCv from '../assets/uiux designer - naduni (1).pdf'
+import seInternCv from '../assets/SE- CV- Naduni.pdf'
 
 const Hero = () => {
     const [showDropdown, setShowDropdown] = useState(false)
