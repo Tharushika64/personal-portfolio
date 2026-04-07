@@ -20,6 +20,8 @@ import salonEaseImg from '../assets/saloneasa.png'
 import salonEaseVideo from '../assets/saloneasa.mp4'
 import eventImg from '../assets/EVENT.png'
 import eventVideo from '../assets/eventmanagement.mp4'
+import beachCleanImg from '../assets/Beach Clean.png'
+import beachCleanVideo from '../assets/Beach Clean.mp4'
 
 const Projects = () => {
     const [activeTab, setActiveTab] = useState('ui/ux')
@@ -219,6 +221,40 @@ const Projects = () => {
             isVideo: true,
             isClient: true,
             completed: true
+        },
+        {
+            title: 'Smart Beach Cleaning Robot Web Application',
+            category: 'UI/UX Design',
+            image: beachCleanImg,
+            description: 'The project involves a web-based system designed to monitor, control, and manage an autonomous beach cleaning robot. It serves as a central hub for the development team and stakeholders to ensure the robot operates within defined parameters and schedules.',
+            details: 'The Smart Beach Cleaning Robot project is a comprehensive ecosystem designed to automate coastal cleaning. This specific document outlines the requirements for the Web Application Team, who are responsible for developing the central hub that allows users to remotely monitor, control, and manage the autonomous robot. It serves as a technical guide for developers, testers, and stakeholders to ensure all functional and security standards are met.',
+            productOverview: [
+                'Modes of Operation: Switch between Manual and Autonomous cleaning modes',
+                'Real-time Dashboard: Robot status, live GPS location tracking on interactive map',
+                'Battery Level Monitoring: Track power levels in real-time',
+                'Geofencing: Set operational boundaries for the robot',
+                'Schedule Cleaning Times: Plan automated cleaning sessions',
+                'Real-time Notifications: Alerts for low battery, theft attempts, or manual interference'
+            ],
+            problemStatement: [
+                'Need for remote monitoring to ensure the robot functions correctly without constant physical supervision',
+                'Risk of theft or unauthorized manual interference while the robot is deployed in open areas',
+                'Difficulty tracking battery health and precise location across large-scale coastal terrain'
+            ],
+            proposedSolution: [
+                'Highly responsive web platform integrating robot hardware with centralized user interface',
+                'MQTT, TCP/IP, and HTTPS protocols ensure dashboard updates within 5-second window',
+                'AI detection module integration via API to identify and track garbage collection statistics',
+                'Encrypted data communication and secure login system',
+                'Direct connection to robot\'s onboard computer, GPS module, and GSM module',
+                '99% server uptime requirement for maximum reliability'
+            ],
+            technologies: ['Figma', 'IoT Design', 'UI/UX Design', 'Dashboard Design'],
+            liveLink: beachCleanVideo,
+            figmaLink: 'https://www.figma.com/design/f4aVoxCmro9QXAw4Kemz6c/bluvyn?node-id=152-7423&t=kKqZ1fEd7eEAjvgA-1',
+            isVideo: true,
+            isClient: true,
+            completed: false
         }
     ]
 
@@ -301,6 +337,27 @@ const Projects = () => {
             githubLink: 'https://github.com/Tharushika64/ANGULAR-PROJECT',
             isVideo: true,
             completed: true
+        },
+        {
+            title: 'Smart Beach Cleaning Robot Web Application',
+            category: 'Fullstack',
+            image: beachCleanImg,
+            description: 'The project involves a web-based system designed to monitor, control, and manage an autonomous beach cleaning robot. It serves as a central hub for the development team and stakeholders to ensure the robot operates within defined parameters and schedules.',
+            details: 'The Smart Beach Cleaning Robot Web Application is a comprehensive ecosystem designed to automate coastal cleaning. This frontend implementation provides developers with a central hub that allows users to remotely monitor, control, and manage the autonomous robot. The application serves as the primary interface for developers, testers, and stakeholders to interact with the robot hardware while maintaining functional and security standards.',
+            productOverview: [
+                'Modes of Operation: Switch between Manual and Autonomous cleaning modes',
+                'Real-time Dashboard: Robot status, live GPS location tracking on interactive map',
+                'Battery Level Monitoring: Track power levels in real-time',
+                'Geofencing: Set operational boundaries for the robot',
+                'Schedule Cleaning Times: Plan automated cleaning sessions',
+                'Real-time Notifications: Alerts for low battery, theft attempts, or manual interference'
+            ],
+            technologies: ['React', 'Tailwind CSS', 'Python', 'MySQL'],
+            liveLink: beachCleanVideo,
+            githubLink: 'https://github.com/Tharushika64/bluvny_webTeamProject.git',
+            isVideo: true,
+            isClient: true,
+            completed: false
         },
 
     ]
