@@ -21,7 +21,7 @@ import salonEaseVideo from '../assets/saloneasa.mp4'
 import eventImg from '../assets/EVENT.png'
 import eventVideo from '../assets/eventmanagement.mp4'
 import beachCleanImg from '../assets/Beach Clean.png'
-import beachCleanVideo from '../assets/Beach Clean.mp4'
+import beachCleanVideo from '../assets/beachclean.mp4'
 
 const Projects = () => {
     const [activeTab, setActiveTab] = useState('ui/ux')
@@ -250,7 +250,7 @@ const Projects = () => {
                 '99% server uptime requirement for maximum reliability'
             ],
             technologies: ['Figma', 'IoT Design', 'UI/UX Design', 'Dashboard Design'],
-            liveLink: beachCleanVideo,
+            liveLink: beachcleanVideo,
             figmaLink: 'https://www.figma.com/design/f4aVoxCmro9QXAw4Kemz6c/bluvyn?node-id=152-7423&t=kKqZ1fEd7eEAjvgA-1',
             isVideo: true,
             isClient: true,
@@ -353,7 +353,7 @@ const Projects = () => {
                 'Real-time Notifications: Alerts for low battery, theft attempts, or manual interference'
             ],
             technologies: ['React', 'Tailwind CSS', 'Python', 'MySQL'],
-            liveLink: beachCleanVideo,
+            liveLink: beachcleanVideo,
             githubLink: 'https://github.com/Tharushika64/bluvny_webTeamProject.git',
             isVideo: true,
             isClient: true,
